@@ -33,10 +33,31 @@ pipes/
 ## Quick Start
 
 ```bash
+# Clone
+git clone https://github.com/YaroTanko/pipes.git
+cd pipes
+
 # Install pre-commit hooks
 pip install pre-commit
 pre-commit install
+
+# Run hooks manually on all files
+pre-commit run --all-files
 ```
+
+## Usage
+
+1. **Новая задача** — начни с `docs/ai-workflow.md`, пройди все 6 стадий
+2. **Пишешь код** — сверяйся с `docs/engineering-rules.md`
+3. **Готовишь PR** — пройди `docs/pr-checklist.md`
+4. **Типовая задача** — используй playbook из `playbooks/`
+
+## CI
+
+GitHub Actions автоматически запускает на каждый PR:
+- **markdownlint** — проверка Markdown файлов
+- **yamllint** — проверка YAML файлов
+- **shellcheck** — проверка shell скриптов (если есть)
 
 ## License
 
